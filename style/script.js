@@ -1,16 +1,16 @@
 "strict mode";
-const btn = document.querySelector(".dice");
+const btn = document.querySelector(".dice-btn");
 const card = document.querySelector(".card-content");
 
-// Call the API
-btn.addEventListener("click", callData);
-// render APi to the html
+// Init
+callData();
 
 async function callData() {
+  // Call the API
   const res = await fetch("https://api.adviceslip.com/advice");
   const data = await res.json();
 
-  console.log(data);
+  // render APi to the html
   const html = `
   <p class="title-advice">ADVICE #${data.slip.id}</p>
   <p class="advice">
@@ -31,6 +31,12 @@ async function callData() {
     </g>
   </svg>
   `;
+  // clear the old advice
   card.innerHTML = "";
+
+  // return and add to the html
   return (card.innerHTML += html);
 }
+
+// render new advice on click
+btn.addEventListener("click", callData);
