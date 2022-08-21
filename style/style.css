@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  background-color: var(--secondary-color-blue-dark-blue);
+}
+
+.card {
+  background: var(--secondary-color-dark-grayish-blue);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  border-radius: 8px;
+}
+.card-content {
+  text-align: center;
+}
+.title-advice {
+  color: var(--main-bg-color-green);
+  font-size: 11px;
+  margin-top: 15px;
+  padding: 20px;
+  letter-spacing: 3px;
+}
+.advice {
+  font-size: 20px;
+  line-height: 28px;
+  padding: 0 50px;
+}
+.divider {
+  margin: 20px 0;
+}
+.dice-btn {
+  position: relative;
+  top: 25px;
+  margin: auto;
+  width: 22px;
+  border-radius: 70%;
+  padding: 12px;
+  background-color: var(--main-bg-color-green);
+  cursor: pointer;
+}
+
+.dice {
+  width: 100%;
+  height: auto;
+  justify-self: center;
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    width: 400px;
+  }
+  .advice {
+    padding: 0 40px;
+    margin-bottom: 10px;
+  }
+}
